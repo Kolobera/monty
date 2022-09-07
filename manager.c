@@ -18,6 +18,8 @@ void get_func(char *op)
 		{"div", _div},
 		{"mul", _mul},
 		{"mod", _mod},
+		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}
 
 	};
