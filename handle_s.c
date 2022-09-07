@@ -13,11 +13,19 @@ void _push(stack_t **stack, unsigned int line_number)
 	if ((_isnumber(global.num)) == 1)
 	{
 		dprintf(2, "L%d: usage: push integer\n", line_number);
+		exit_op();
 		exit(EXIT_FAILURE);
 	}
 
 	n = atoi(global.num);
-	add_dnodeint(stack, n);
+	if(!add_dnodeint(stack, n))
+	{
+		{
+		dprintf(2, "Error: malloc failed\n");
+		exit_op();
+		exit(EXIT_FAILURE);
+		}
+	}
 }
 /**
  * _pall - read fun
