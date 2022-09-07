@@ -60,7 +60,8 @@ void openfile(char *namefile)
             }
 		}
 		free(buff);
-		fclose(file);
+		/*fclose(file);*/
+		exit_op();
 		exit(EXIT_SUCCESS);
 	}
 }
