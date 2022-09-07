@@ -7,7 +7,7 @@
  */
 stack_t *add_dnodeint(stack_t **head, const int n)
 {
-	stack_t *newnode;
+	/*stack_t *newnode;
 
 	if (head == NULL)
 		return (NULL);
@@ -32,7 +32,26 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 		(*head)->prev = newnode;
 	}
 	*head = newnode;
-	return (newnode);
+	return (newnode);*/
+	stack_t *new, *temp;
+
+	new = malloc(sizeof(stack_t));
+	if (!new)
+		return (NULL);
+	new->n = n;
+	new->prev = NULL;
+	temp = *head;
+	if (!*head)
+	{
+		new->next = NULL;
+	}
+	else
+	{
+		new->next = temp;
+		temp->prev = new;
+	}
+	*head = new;
+	return (new);
 }
 /**
  *add_dnodeint_end - add new node at the end

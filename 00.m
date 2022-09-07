@@ -1,5 +1,5 @@
-push 2
-push 2
-push 3
+push 25
+push 1655555555555555555755555555412
+push -3
 pall
 push hjg
