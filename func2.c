@@ -1,4 +1,5 @@
 #include "monty.h"
+int dprintf(int fd, const char *format, ...);
 /**
  * _pchar - prints top stack number as ascii
  * @node: pointer to head
@@ -12,14 +13,14 @@ void _pchar(stack_t **node, unsigned int line_count)
 	if (!*node || !node)
 	{
 		dprintf(2, "L%u: can't pchar, stack empty\n", line_count);
-		free_all();
+		exit_op();
 		exit(EXIT_FAILURE);
 	}
 	num = (*node)->n;
 	if ((num < 33) || (num > 127))
 	{
 		dprintf(2, "L%u: can't pchar, value out of range\n", line_count);
-		free_all();
+		exit_op();
 		exit(EXIT_FAILURE);
 	}
 	putchar(num);
@@ -32,9 +33,10 @@ void _pchar(stack_t **node, unsigned int line_count)
  * @line_count: current line number
  * Return: void function
  */
-void _pstr(stack_t **node, __attribute__((unused)) unsigned int line_count)
+void _pstr(stack_t **node, unsigned int line_count)
 {
 	stack_t *temp = *node;
+    (void)line_count;
 
 	while (temp && (temp->n != 0) && ((temp->n) > 32) && ((temp->n) < 128))
 	{
