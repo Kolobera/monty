@@ -74,6 +74,8 @@ void _swap(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
 void _pchar(stack_t **node, unsigned int line_count);
 void _pstr(stack_t **node, unsigned int line_count);
+void _rotl(stack_t **head, unsigned int line_count);
+void _rotr(stack_t **head, unsigned int line_count);
 void _pint(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
 stack_t *add_dnodeint(stack_t **head, const int n);
