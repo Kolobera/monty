@@ -112,13 +112,25 @@ int delete_node_index(stack_t **head, unsigned int index)
  */
 void free_stack_t(stack_t **head)
 {
-	stack_t *tmp;
+/*	stack_t *tmp;
 
 	while (head)
 	{
 		tmp = *head;
 		*head = (*head)->next;
 		free(tmp);
+	}
+}*/
+	stack_t *node_free;
+	stack_t *temp = NULL;
+
+	node_free = *head;
+
+	while (node_free)
+	{
+		temp = node_free->next;
+		free(node_free);
+		node_free = temp;
 	}
 }
 /**
