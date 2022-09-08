@@ -18,7 +18,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	}
 
 	n = atoi(global.num);
-	if(!add_dnodeint(stack, n))
+	if (!add_dnodeint(stack, n))
 	{
 		{
 		dprintf(2, "Error: malloc failed\n");
@@ -116,3 +116,4 @@ void _swap(stack_t **stack, unsigned int line_number)
 
 	*stack = tmp2;
 }
+

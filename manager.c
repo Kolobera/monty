@@ -43,3 +43,4 @@ void get_func(char *op)
 	fprintf(stderr, "L%d: unknown instruction %s\n", global.line_number, op);
 	exit(EXIT_FAILURE);
 }
+

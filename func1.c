@@ -53,15 +53,15 @@ void openfile(char *namefile)
 			line_number++;
 			global.line_number = line_number;
 			ptr = strtok(buff, DELIM);
-            if (ptr)
-            {
-                global.num = strtok(NULL, DELIM);
-                get_func(ptr);
-            }
+			if (ptr)
+			{
+				global.num = strtok(NULL, DELIM);
+				get_func(ptr);
+			}
 		}
 		free(buff);
-		/*fclose(file);*/
 		exit_op();
 		exit(EXIT_SUCCESS);
 	}
 }
+

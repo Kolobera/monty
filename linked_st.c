@@ -7,32 +7,6 @@
  */
 stack_t *add_dnodeint(stack_t **head, const int n)
 {
-	/*stack_t *newnode;
-
-	if (head == NULL)
-		return (NULL);
-
-	newnode = malloc(sizeof(stack_t));
-
-	if (newnode == NULL)
-		return (NULL);
-
-	newnode->n = n;
-
-	if (*head == NULL)
-	{
-		newnode->next = NULL;
-		newnode->prev = NULL;
-	}
-
-	else
-	{
-		newnode->next = *head;
-		newnode->prev = NULL;
-		(*head)->prev = newnode;
-	}
-	*head = newnode;
-	return (newnode);*/
 	stack_t *new, *temp;
 
 	new = malloc(sizeof(stack_t));
@@ -131,15 +105,6 @@ int delete_node_index(stack_t **head, unsigned int index)
  */
 void free_stack_t(stack_t **head)
 {
-/*	stack_t *tmp;
-
-	while (head)
-	{
-		tmp = *head;
-		*head = (*head)->next;
-		free(tmp);
-	}
-}*/
 	stack_t *node_free;
 	stack_t *temp = NULL;
 

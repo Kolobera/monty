@@ -150,3 +150,4 @@ void _mul(stack_t **stack, unsigned int line_number)
 	delete_node_index(stack, 0);
 	(*stack)->n *= tmpn;
 }
+

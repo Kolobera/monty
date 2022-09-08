@@ -4,7 +4,6 @@
  * _nop - doesn’t do anything
  * @stack: Pointer to head of stack (or queue)
  * @line_number: Current line number
- *
  * Return: No Return
  */
 void _nop(stack_t **stack, unsigned int line_number)
@@ -22,3 +21,4 @@ void exit_op(void)
 	fclose(global.file);
 	free_stack_t(global.headstack);
 }
+

@@ -36,7 +36,7 @@ void _pchar(stack_t **node, unsigned int line_count)
 void _pstr(stack_t **node, unsigned int line_count)
 {
 	stack_t *temp = *node;
-    (void)line_count;
+	(void)line_count;
 
 	while (temp && (temp->n != 0) && ((temp->n) > 32) && ((temp->n) < 128))
 	{
@@ -98,3 +98,4 @@ void _rotr(stack_t **head, unsigned int line_count)
 	(*head)->prev = temp;
 	(*head) = temp;
 }
+
